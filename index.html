@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10131e">
+  <meta name="description" content="A collection of games and projects by Gavin.">
+  <title>Games &amp; Projects</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background: #10131e;
+      color: #f5f4ef;
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      --muted: #a8adbc;
+      --panel: #1a1e2c;
+      --line: #34394b;
+      --mint: #9ef4c1;
+      --pink: #ff91ad;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-width: 320px;
+      min-height: 100vh;
+      margin: 0;
+      padding: 32px 20px;
+      background:
+        radial-gradient(ellipse at 50% -15%, #30374d 0, transparent 57%),
+        #10131e;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(900px, 100%);
+      margin: 0 auto;
+    }
+
+    header { padding: 52px 0 32px; }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--mint);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(38px, 8vw, 68px);
+      letter-spacing: -.045em;
+      line-height: 1;
+    }
+
+    .intro {
+      max-width: 540px;
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 12px 0 16px;
+      color: #d7d9e2;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .section-heading::after {
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+      content: "";
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      display: flex;
+      min-height: 230px;
+      flex-direction: column;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(145deg, #202536, var(--panel) 65%);
+      box-shadow: 0 18px 45px #0003;
+      transition: border-color 160ms ease, transform 160ms ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-3px);
+      border-color: #69745f;
+    }
+
+    .project-card:focus-within {
+      outline: 2px solid var(--mint);
+      outline-offset: 3px;
+    }
+
+    .project-icon {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      place-items: center;
+      border: 1px solid #58634f;
+      border-radius: 14px;
+      background: #27372e;
+      color: var(--mint);
+      font-size: 24px;
+    }
+
+    .project-card h3 {
+      margin: 20px 0 8px;
+      font-size: 21px;
+    }
+
+    .project-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .project-links a {
+      color: var(--mint);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .project-links a:hover { text-decoration: underline; }
+
+    .project-links a:focus-visible,
+    footer a:focus-visible {
+      border-radius: 3px;
+      outline: 2px solid var(--pink);
+      outline-offset: 4px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    footer a { color: #d7d9e2; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <p class="eyebrow">Made by Gavin</p>
+      <h1>Games &amp;<br>Projects</h1>
+      <p class="intro">A small collection of games and experiments. Pick something and have a look.</p>
+    </header>
+
+    <section aria-labelledby="projects-heading">
+      <h2 class="section-heading" id="projects-heading">Projects</h2>
+      <div class="projects">
+        <article class="project-card">
+          <div class="project-icon" aria-hidden="true">✦</div>
+          <h3>Worms: Pocket Artillery</h3>
+          <p>A turn-based artillery game. Aim, pick your shot, and send it across the arena.</p>
+          <div class="project-links">
+            <a href="https://guantong.github.io/worms-clone/" target="_blank" rel="noopener noreferrer">Play the game ↗</a>
+            <a href="https://github.com/guantong/worms-clone" target="_blank" rel="noopener noreferrer">View source ↗</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer>
+      Find me on <a href="https://github.com/guantong" target="_blank" rel="noopener noreferrer">GitHub</a>.
+    </footer>
+  </main>
+</body>
+</html>
