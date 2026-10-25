@@ -93,9 +93,8 @@
 
     .project-card {
       display: flex;
-      min-height: 230px;
       flex-direction: column;
-      padding: 22px;
+      overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 18px;
       background: linear-gradient(145deg, #202536, var(--panel) 65%);
@@ -113,20 +112,33 @@
       outline-offset: 3px;
     }
 
-    .project-icon {
-      display: grid;
-      width: 44px;
-      height: 44px;
-      place-items: center;
-      border: 1px solid #58634f;
-      border-radius: 14px;
-      background: #27372e;
-      color: var(--mint);
-      font-size: 24px;
+    .project-preview {
+      display: block;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      border-bottom: 1px solid var(--line);
+      background: #131722;
+    }
+
+    .project-preview img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 180ms ease;
+    }
+
+    .project-card:hover .project-preview img { transform: scale(1.025); }
+
+    .project-body {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 18px 20px 20px;
     }
 
     .project-card h3 {
-      margin: 20px 0 8px;
+      margin: 0 0 8px;
       font-size: 21px;
     }
 
@@ -184,19 +196,46 @@
     <header>
       <p class="eyebrow">Made by Gavin</p>
       <h1>Games &amp;<br>Projects</h1>
-      <p class="intro">A small collection of games and experiments. Pick something and have a look.</p>
+      <p class="intro">A small collection of games and experiments. Pick something and have fun playing.</p>
     </header>
 
     <section aria-labelledby="projects-heading">
       <h2 class="section-heading" id="projects-heading">Projects</h2>
       <div class="projects">
         <article class="project-card">
-          <div class="project-icon" aria-hidden="true">✦</div>
-          <h3>Worms: Pocket Artillery</h3>
-          <p>A turn-based artillery game. Aim, pick your shot, and send it across the arena.</p>
-          <div class="project-links">
-            <a href="https://guantong.github.io/worms-clone/" target="_blank" rel="noopener noreferrer">Play the game ↗</a>
-            <a href="https://github.com/guantong/worms-clone" target="_blank" rel="noopener noreferrer">View source ↗</a>
+          <a class="project-preview" href="https://guantong.github.io/build-a-castle/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/build-a-castle.png" alt="Screenshot of the castle-building workshop" width="1280" height="820" loading="lazy">
+          </a>
+          <div class="project-body">
+            <h3>Block &amp; Battlement</h3>
+            <p>Place colorful building pieces across a tiny kingdom and orbit around your 3D castle.</p>
+            <div class="project-links">
+              <a href="https://guantong.github.io/build-a-castle/" target="_blank" rel="noopener noreferrer">Play the game ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <a class="project-preview" href="https://guantong.github.io/cookie-lab/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/cookie-lab.png" alt="Screenshot of the cookie decorating studio" width="1280" height="820" loading="lazy">
+          </a>
+          <div class="project-body">
+            <h3>Cookie Lab</h3>
+            <p>Choose a cookie base, add colorful toppings, and save your own freshly decorated creation.</p>
+            <div class="project-links">
+              <a href="https://guantong.github.io/cookie-lab/" target="_blank" rel="noopener noreferrer">Play the game ↗</a>
+            </div>
+          </div>
+        </article>
+        <article class="project-card">
+          <a class="project-preview" href="https://guantong.github.io/worms-clone/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/worms-clone.png" alt="Screenshot of Worms: Pocket Artillery gameplay" width="1280" height="820" loading="lazy">
+          </a>
+          <div class="project-body">
+            <h3>Worms: Pocket Artillery</h3>
+            <p>A turn-based artillery duel: set your angle and power, account for the wind, and launch rockets across the landscape.</p>
+            <div class="project-links">
+              <a href="https://guantong.github.io/worms-clone/" target="_blank" rel="noopener noreferrer">Play the game ↗</a>
+            </div>
           </div>
         </article>
       </div>
