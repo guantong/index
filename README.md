@@ -1,4 +1,4 @@
-# Games & Projects
+# Games & Learn
 
 A small portfolio page linking to browser games and experiments by Gavin.
 
@@ -29,6 +29,14 @@ A turn-based artillery duel. Set your angle and power, account for the wind, and
 ![Worms: Pocket Artillery screenshot](assets/worms-clone.png)
 
 [Play the game](https://guantong.github.io/worms-clone/)
+
+### Solar System Field Atlas
+
+Explore an interactive map of the eight planets and a field guide to our solar neighborhood.
+
+![Solar System Field Atlas screenshot](assets/solar-system.png)
+
+[Explore the atlas](https://guantong.github.io/solar-system/)
 
 ## Preview locally
 
